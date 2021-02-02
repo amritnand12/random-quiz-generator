@@ -28,6 +28,30 @@ for i in range(len(data)):
     else:
         answer.append(3)
     n += 1
+# COMMENTED CODE IS FOR SQLITE DATABASE
+# IN ORDER TO CREATE DATABASE , THE INSERT VALUE SQLITE COMMAND WAS RUN WITHIN THE LOOP OF SOURCE CODE TO FILL THE DATABASE WITH ALL THE DATA
+
+# import sqlite3
+# table = sqlite3.connect('quizdata.db')
+# table.execute(" CREATE TABLE IF NOT EXISTS QUESTIONS(ques VARCHAR(8000),"
+#               "op1 VARCHAR(8000),op2 VARCHAR(8000),op3 VARCHAR(8000),op4 VARCHAR(8000),"
+#               "ans VARCHAR(8000));")
+# table.commit()
+# l = table.execute("SELECT * FROM QUESTIONS")
+# for row in l:
+#     queso, op1, op2, op3, op4, ans = row
+#     questions.append(queso)
+#     options.append([op1, op2, op3, op4])
+#     if ans == op1:
+#         answer.append(0)
+#     elif ans == op2:
+#         answer.append(1)
+#     elif ans == op3:
+#         answer.append(2)
+#     else:
+#         answer.append(3)
+#     n += 1
+# table.close()
 
 root = tkinter.Tk()
 root.title('QuizTime')
